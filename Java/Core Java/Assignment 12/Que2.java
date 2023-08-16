@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Que2 {
 
     public static void main(String[] args) {
-        //  FileInputStream
+        //  FileInputStream 
         /*
             try {
             File file = new File("myFile.txt");
