@@ -37,3 +37,22 @@ mysql> select First_name, Last_name from employee;
 8 rows in set (0.00 sec)
 
 mysql>
+
+3. Get First_Name from employee table in upper case
+
+mysql> Select upper(First_name) from employee;
++-------------------+
+| upper(First_name) |
++-------------------+
+| JOHN              |
+| MICHAEL           |
+| ROY               |
+| TOM               |
+| JERRY             |
+| PHILIP            |
+| TESTNAME1         |
+| TESTNAME2         |
++-------------------+
+8 rows in set (0.00 sec)
+
+mysql>
