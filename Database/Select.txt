@@ -17,3 +17,23 @@ mysql> select * from employee;
 
 mysql>
 
+
+2. Get First_Name,Last_Name from employee table
+
+
+mysql> select First_name, Last_name from employee;
++------------+-----------+
+| First_name | Last_name |
++------------+-----------+
+| John       | Abraham   |
+| Michael    | Clarke    |
+| Roy        | Thomas    |
+| Tom        | Jose      |
+| Jerry      | Pinto     |
+| Philip     | Mathew    |
+| TestName1  | 123       |
+| TestName2  | Lname%    |
++------------+-----------+
+8 rows in set (0.00 sec)
+
+mysql>
