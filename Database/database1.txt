@@ -103,3 +103,75 @@ mysql> select * from Incentives;
 5 rows in set (0.00 sec)
 
 mysql>
+
+
+2. Add Primary key Constrains to both table;
+
+mysql> show tables;
++--------------------+
+| Tables_in_profound |
++--------------------+
+| employee           |
+| incentives         |
++--------------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from employee;
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_data        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           1 | John       | Abraham   | 1000000 | 2013-01-01 00:00:00 | Banking    |
+|           2 | Michael    | Clarke    | 800000  | 2013-01-01 12:00:00 | Insurance  |
+|           3 | Roy        | Thomas    | 700000  | 2013-02-01 12:00:00 | Banking    |
+|           4 | Tom        | Jose      | 600000  | 2013-02-01 12:00:00 | Insurance  |
+|           5 | Jerry      | Pinto     | 650000  | 2013-02-01 12:00:00 | Insurance  |
+|           6 | Philip     | Mathew    | 750000  | 2013-01-01 12:00:00 | Services   |
+|           7 | TestName1  | 123       | 650000  | 2013-01-01 12:00:00 | Services   |
+|           8 | TestName2  | Lname%    | 600000  | 2013-02-01 12:00:00 | Insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+8 rows in set (0.00 sec)
+
+mysql> select * from incentives;
++-----------------+----------------+------------------+
+| Employee_ref_id | Incentive_date | Incentive_amount |
++-----------------+----------------+------------------+
+|               1 | 2013-02-01     | 5000             |
+|               2 | 2013-02-01     | 3000             |
+|               3 | 2013-02-01     | 4000             |
+|               1 | 2013-01-01     | 4500             |
+|               2 | 2013-01-01     | 3500             |
++-----------------+----------------+------------------+
+5 rows in set (0.00 sec)
+
+mysql> alter table employee add Primary key(Employee_id);
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table Incentives add primary key(Employee_ref_id, Incentive_date);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc employee;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| Employee_id  | int         | NO   | PRI | NULL    |       |
+| First_name   | varchar(30) | YES  |     | NULL    |       |
+| Last_name    | varchar(30) | YES  |     | NULL    |       |
+| Salary       | varchar(10) | YES  |     | NULL    |       |
+| Joining_data | datetime    | YES  |     | NULL    |       |
+| Department   | varchar(30) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> desc incentives;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| Employee_ref_id  | int         | NO   | PRI | NULL    |       |
+| Incentive_date   | date        | NO   | PRI | NULL    |       |
+| Incentive_amount | varchar(10) | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql>
