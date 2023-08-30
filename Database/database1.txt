@@ -1,0 +1,75 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| profound           |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use profound;
+Database changed
+mysql> desc Employee;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| Employee_id  | int         | YES  |     | NULL    |       |
+| First_name   | varchar(30) | YES  |     | NULL    |       |
+| Last_name    | varchar(30) | YES  |     | NULL    |       |
+| Salary       | varchar(10) | YES  |     | NULL    |       |
+| Joining_data | datetime    | YES  |     | NULL    |       |
+| Department   | varchar(30) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+mysql> select * from Employee;
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_data        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           1 | John       | Abraham   | 1000000 | 2013-01-01 00:00:00 | Banking    |
+|           2 | Michael    | Clarke    | 800000  | 2013-01-01 12:00:00 | Insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into Employee values(3, 'Roy', 'Thomas', 700000, '2013-02-01 12:00:00', 'Banking'),(4, 'Tom', 'Jose', 600000, '2013-02-01 12:00:00', 'Insurance'),(5, 'Jerry', '
+Pinto', 650000, '2013-02-01 12:00:00', 'Insurance');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from Employee;
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_data        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           1 | John       | Abraham   | 1000000 | 2013-01-01 00:00:00 | Banking    |
+|           2 | Michael    | Clarke    | 800000  | 2013-01-01 12:00:00 | Insurance  |
+|           3 | Roy        | Thomas    | 700000  | 2013-02-01 12:00:00 | Banking    |
+|           4 | Tom        | Jose      | 600000  | 2013-02-01 12:00:00 | Insurance  |
+|           5 | Jerry      | Pinto     | 650000  | 2013-02-01 12:00:00 | Insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> insert into Employee values(6, 'Philip', 'Mathew', 750000, '2013-01-01 12:00:00', 'Services'),(7, 'TestName1', '123', 650000, '2013-01-01 12:00:00', 'Services'),(8, 'TestName2', 'Lname%', 600000, '2013-02-01 12:00:00', 'Insurance');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from Employee;
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_data        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           1 | John       | Abraham   | 1000000 | 2013-01-01 00:00:00 | Banking    |
+|           2 | Michael    | Clarke    | 800000  | 2013-01-01 12:00:00 | Insurance  |
+|           3 | Roy        | Thomas    | 700000  | 2013-02-01 12:00:00 | Banking    |
+|           4 | Tom        | Jose      | 600000  | 2013-02-01 12:00:00 | Insurance  |
+|           5 | Jerry      | Pinto     | 650000  | 2013-02-01 12:00:00 | Insurance  |
+|           6 | Philip     | Mathew    | 750000  | 2013-01-01 12:00:00 | Services   |
+|           7 | TestName1  | 123       | 650000  | 2013-01-01 12:00:00 | Services   |
+|           8 | TestName2  | Lname%    | 600000  | 2013-02-01 12:00:00 | Insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+8 rows in set (0.00 sec)
+
+mysql>
