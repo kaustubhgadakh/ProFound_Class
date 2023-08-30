@@ -175,3 +175,35 @@ mysql> desc incentives;
 3 rows in set (0.00 sec)
 
 mysql>
+
+    3. Write Sql Syntax to create EMPLOYEE_REF_ID in INCENTIVES table as foreign key 
+        with respect to EMPLOYEE_ID in employee table
+
+mysql> alter table incentives add constraint fk_employee_ref foreign key(Employee_ref_id) references Employee(Employee_id);
+Query OK, 5 rows affected (0.03 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> desc employee;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| Employee_id  | int         | NO   | PRI | NULL    |       |
+| First_name   | varchar(30) | YES  |     | NULL    |       |
+| Last_name    | varchar(30) | YES  |     | NULL    |       |
+| Salary       | varchar(10) | YES  |     | NULL    |       |
+| Joining_data | datetime    | YES  |     | NULL    |       |
+| Department   | varchar(30) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> desc incentives;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| Employee_ref_id  | int         | NO   | PRI | NULL    |       |
+| Incentive_date   | date        | NO   | PRI | NULL    |       |
+| Incentive_amount | varchar(10) | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql>
