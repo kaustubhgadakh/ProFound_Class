@@ -72,4 +72,34 @@ mysql> select * from Employee;
 +-------------+------------+-----------+---------+---------------------+------------+
 8 rows in set (0.00 sec)
 
+mysql>show tables;
++--------------------+
+| Tables_in_profound |
++--------------------+
+| employee           |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> create table Incentives(Employee_ref_id int, Incentive_date date, Incentive_amount varchar(10));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into Incentives values(1, '2013-02-01', 5000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Incentives values(2, '2013-02-01', 3000),(3, '2013-02-01', 4000),(1, '2013-01-01', 4500),(2, '2013-01-01', 3500);
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from Incentives;
++-----------------+----------------+------------------+
+| Employee_ref_id | Incentive_date | Incentive_amount |
++-----------------+----------------+------------------+
+|               1 | 2013-02-01     | 5000             |
+|               2 | 2013-02-01     | 3000             |
+|               3 | 2013-02-01     | 4000             |
+|               1 | 2013-01-01     | 4500             |
+|               2 | 2013-01-01     | 3500             |
++-----------------+----------------+------------------+
+5 rows in set (0.00 sec)
+
 mysql>
