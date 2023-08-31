@@ -54,3 +54,17 @@ mysql> select department,sum(salary) from employee group by department order by 
 +------------+-------------+
 3 rows in set (0.00 sec)
 
+
+    //  3. Get department,no of employees in a department,total salary with respect to a
+            department from employee table order by total salary descending
+
+mysql> select department,count(*),sum(salary) from employee group by department order by sum(salary) desc;
++------------+----------+-------------+
+| department | count(*) | sum(salary) |
++------------+----------+-------------+
+| Insurance  |        4 |     2650000 |
+| Banking    |        2 |     1700000 |
+| Services   |        2 |     1400000 |
++------------+----------+-------------+
+3 rows in set (0.00 sec)
+
