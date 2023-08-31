@@ -53,17 +53,12 @@ mysql> select * from Incentives;
 
     //  1. Get unique DEPARTMENT from employee table
 
-mysql> select Department from employee order by Department;
+mysql> select distinct Department from employee;
 +------------+
 | Department |
 +------------+
 | Banking    |
-| Banking    |
 | Insurance  |
-| Insurance  |
-| Insurance  |
-| Insurance  |
-| Services   |
 | Services   |
 +------------+
 8 rows in set (0.00 sec)
