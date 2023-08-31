@@ -93,3 +93,16 @@ mysql> select department,max(salary)salary from employee group by department ord
 | Insurance  | 800000 |
 +------------+--------+
 3 rows in set (0.00 sec)
+
+
+    //  6. Select no of employees joined with respect to year and month from employee table
+
+mysql> select department, sum(salary) salary from employee group by department having sum(salary)>800000 order by salary;
++------------+---------+
+| department | salary  |
++------------+---------+
+| Services   | 1400000 |
+| Banking    | 1700000 |
+| Insurance  | 2650000 |
++------------+---------+
+3 rows in set (0.00 sec)
