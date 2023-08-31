@@ -37,4 +37,15 @@ mysql> select * from employee where first_name like 'j%';
 +-------------+------------+-----------+---------+---------------------+------------+
 2 rows in set (0.00 sec)
 
-    
+
+    //  2. Get employee details from employee table whose first name contains 'o'
+
+mysql> select * from employee where first_name like '%o%';
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_data        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           1 | John       | Abraham   | 1000000 | 2013-01-01 00:00:00 | Banking    |
+|           3 | Roy        | Thomas    | 700000  | 2013-02-01 12:00:00 | Banking    |
+|           4 | Tom        | Jose      | 600000  | 2013-02-01 12:00:00 | Insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+3 rows in set (0.00 sec)
