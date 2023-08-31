@@ -68,3 +68,15 @@ mysql> select department,count(*),sum(salary) from employee group by department 
 +------------+----------+-------------+
 3 rows in set (0.00 sec)
 
+
+    //  4. Get department wise average salary from employee table order by salary ascending
+
+mysql> select department,avg(salary)salary from employee group by department order by salary;
++------------+--------+
+| department | salary |
++------------+--------+
+| Insurance  | 662500 |
+| Services   | 700000 |
+| Banking    | 850000 |
++------------+--------+
+3 rows in set (0.00 sec)
