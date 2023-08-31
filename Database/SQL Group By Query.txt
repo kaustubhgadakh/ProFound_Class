@@ -80,3 +80,16 @@ mysql> select department,avg(salary)salary from employee group by department ord
 | Banking    | 850000 |
 +------------+--------+
 3 rows in set (0.00 sec)
+
+
+    //  5. Get department wise maximum salary from employee table order by salary ascending
+
+mysql> select department,max(salary)salary from employee group by department order by salary;
++------------+--------+
+| department | salary |
++------------+--------+
+| Banking    | 700000 |
+| Services   | 750000 |
+| Insurance  | 800000 |
++------------+--------+
+3 rows in set (0.00 sec)
