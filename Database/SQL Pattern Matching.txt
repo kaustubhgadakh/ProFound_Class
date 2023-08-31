@@ -1,0 +1,10 @@
+                        -:Que:-
+1. Get employee details from employee table whose first name ends with 'n' and name contains 4 letters
+2. Get employee details from employee table whose first name starts with 'J' and name contains 4 letters
+3. Get employee details from employee table whose Salary greater than 600000
+4. Get employee details from employee table whose Salary less than 800000
+5. Get employee details from employee table whose Salary between 500000 and 800000
+6. Get employee details from employee table whose name is 'John' and 'Michael'
+
+
+
