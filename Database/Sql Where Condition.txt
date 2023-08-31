@@ -35,3 +35,15 @@ mysql> select * from employee where first_name='john';
 |           1 | John       | Abraham   | 1000000 | 2013-01-01 00:00:00 | Banking    |
 +-------------+------------+-----------+---------+---------------------+------------+
 1 row in set (0.00 sec)
+
+
+    //  2. Get employee details from employee table whose employee name are “John” and “Roy”
+
+mysql> select * from employee where first_name in ('john','Roy');
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_data        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           1 | John       | Abraham   | 1000000 | 2013-01-01 00:00:00 | Banking    |
+|           3 | Roy        | Thomas    | 700000  | 2013-02-01 12:00:00 | Banking    |
++-------------+------------+-----------+---------+---------------------+------------+
+2 rows in set (0.00 sec)
