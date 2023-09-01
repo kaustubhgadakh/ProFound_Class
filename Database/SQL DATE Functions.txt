@@ -1,0 +1,22 @@
+                    -: Que :-
+
+1. Get employee details from employee table whose joining year is “2013”
+2. Get employee details from employee table whose joining month is “January”
+3. Get employee details from employee table who joined after January 31st
+4. Get database date
+5. Get Employee ID's of those employees who didn't receive incentives without using
+sub query ?(MINUS)
+6. Delete employee data from employee table who got incentives in incentive table
+7. Update incentive table where employee name is 'John'
+
+
+                    -: Ans4 :-
+
+mysql> SELECT CURRENT_DATE AS database_date;
++---------------+
+| database_date |
++---------------+
+| 2023-09-01    |
++---------------+
+1 row in set (0.00 sec)
+
