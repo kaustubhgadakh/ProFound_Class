@@ -110,6 +110,10 @@ mysql> select first_name, incentive_amount from employee left join incentives on
                         -: Ans 4 :- 
 
 mysql> select first_name, incentive_amount from employee right join incentives on employee.Employee_id=incentives.Employee_ref_id;
+            
+            OR
+
+mysql> select first_name, incentive_amount from incentive left join employee on employee.Employee_id=incentives.Employee_ref_id;
 +------------+------------------+
 | first_name | incentive_amount |
 +------------+------------------+
