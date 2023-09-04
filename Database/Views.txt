@@ -21,7 +21,7 @@ mysql> select * from employee;
 8 rows in set (0.00 sec)
 
 
-                                    -: Ans :-
+                                    -: Ans1 :-
 
 mysql> create view emp_view as select employee_id as Id, concat(first_name,' ', last_name) as Name from employee;
 Query OK, 0 rows affected (0.02 sec)
@@ -42,7 +42,7 @@ mysql> select * from emp_view;
 8 rows in set (0.00 sec)
 
 
-                                    -: Ans :-
+                                    -: Ans2 :-
 
 mysql> create or replace view emp_view as select employee_id as Id, concat(first_name,' ', last_name) as Name, salary from employee;
 Query OK, 0 rows affected (0.01 sec)
@@ -61,6 +61,9 @@ mysql> select * from emp_view;
 |  8 | TestName2 Lname% | 600000  |
 +----+------------------+---------+
 8 rows in set (0.00 sec)
+
+
+                                    -: Ans3 :-
 
 mysql> drop view emp_view;
 Query OK, 0 rows affected (0.01 sec)
