@@ -1,0 +1,72 @@
+                        -: Que :-
+
+1. Create view for Employyee which displays id name of Employee.
+2. Update view to add Salary column to View
+3. drop View
+
+                       
+mysql> select * from employee;
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_data        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           1 | John       | Abraham   | 1000000 | 2013-01-01 00:00:00 | Banking    |
+|           2 | Michael    | Clarke    | 800000  | 2013-01-01 12:00:00 | Insurance  |
+|           3 | Roy        | Thomas    | 700000  | 2013-02-01 12:00:00 | Banking    |
+|           4 | Tom        | Jose      | 600000  | 2013-02-01 12:00:00 | Insurance  |
+|           5 | Jerry      | Pinto     | 650000  | 2013-02-01 12:00:00 | Insurance  |
+|           6 | Philip     | Mathew    | 750000  | 2013-01-01 12:00:00 | Services   |
+|           7 | TestName1  | 123       | 650000  | 2013-01-01 12:00:00 | Services   |
+|           8 | TestName2  | Lname%    | 600000  | 2013-02-01 12:00:00 | Insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+8 rows in set (0.00 sec)
+
+
+                                    -: Ans :-
+
+mysql> create view emp_view as select employee_id as Id, concat(first_name,' ', last_name) as Name from employee;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select * from emp_view;
++----+------------------+
+| Id | Name             |
++----+------------------+
+|  1 | John Abraham     |
+|  2 | Michael Clarke   |
+|  3 | Roy Thomas       |
+|  4 | Tom Jose         |
+|  5 | Jerry Pinto      |
+|  6 | Philip Mathew    |
+|  7 | TestName1 123    |
+|  8 | TestName2 Lname% |
++----+------------------+
+8 rows in set (0.00 sec)
+
+
+                                    -: Ans :-
+
+mysql> create or replace view emp_view as select employee_id as Id, concat(first_name,' ', last_name) as Name, salary from employee;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from emp_view;
++----+------------------+---------+
+| Id | Name             | salary  |
++----+------------------+---------+
+|  1 | John Abraham     | 1000000 |
+|  2 | Michael Clarke   | 800000  |
+|  3 | Roy Thomas       | 700000  |
+|  4 | Tom Jose         | 600000  |
+|  5 | Jerry Pinto      | 650000  |
+|  6 | Philip Mathew    | 750000  |
+|  7 | TestName1 123    | 650000  |
+|  8 | TestName2 Lname% | 600000  |
++----+------------------+---------+
+8 rows in set (0.00 sec)
+
+mysql> drop view emp_view;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from emp_view;
+ERROR 1146 (42S02): Table 'profound.emp_view' doesn't exist
+mysql>
+
+
