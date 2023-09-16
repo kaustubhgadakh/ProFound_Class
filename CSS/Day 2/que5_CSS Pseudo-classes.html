@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-classes</title>
+    <style>
+        .div1{
+            height: auto;
+            padding: 20px;
+            background-color: #cfcfcf;
+        }
+        a{
+            color: black;
+            text-decoration: none;  /* Remove underlines */
+        }
+        .hover-link:hover{
+            color: red;
+        }
+        .visited-link{
+            color: white;
+        }
+
+        input:focus {
+            border: 5px solid red;
+        }
+
+        ul li:first-child {
+            font-weight: bold;
+        }
+
+        div p:last-child {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(odd) {
+             background-color: #f2f2f2;
+        }
+
+        span:lang(en) {
+            color: red;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        •Setting styles for different states of hyperlinks
+        •Setting styles for form element in focus using the :focus pseudo-class
+        •Setting the styles for first child of an element using the :first-child pseudo-class
+        •Setting styles for last child of an element using the :first-child pseudo-class
+        •Setting styles for nth-child of an element using the :nth-child pseudo-class
+        •Setting styles for specific language using the :lang() pseudo-class
+        •Using pseudo-classes with selectors
+     -->
+     <h1>CSS Pseudo-classes</h1>
+
+     <div class="div1">
+        <h3>Setting styles for different states of hyperlinks</h3>
+        <a class="default-link" href="#">Default Link 1</a>
+        <br>
+        <a class="hover-link" href="#">Hover Link 2</a>
+        <br>
+        <a class="visited-link" href="#">Visited Link 3</a>
+     </div>
+     <hr>
+
+     <div class="div1">
+        <h3>Setting styles for form element in focus using the :focus pseudo-class</h3>
+        <form>
+            <label for="inputField">Input Field:</label>
+            <input type="text" id="inputField">
+        </form>
+     </div>
+     <hr>
+
+     <div class="div1">
+        <h3>Setting the styles for first child of an element using the :first-child pseudo-class</h3>
+        <ul>
+            <li>First List</li>
+            <li>Second List</li>
+            <li>Third List</li>
+        </ul>
+     </div>
+     <hr>
+
+     <div class="div1">
+        <h3>Setting styles for last child of an element using the :first-child pseudo-class</h3>
+        <div>
+            <p>First Paragraph</p>
+            <p>Second Paragraph</p>
+            <p>Last Paragraph</p>
+        </div>
+     </div>
+     <hr>
+
+     <div class="div1">
+        <h3>Setting styles for nth-child of an element using the :nth-child pseudo-class</h3>
+        <table>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+            </tr>
+        </table>
+     </div>
+     <hr>
+
+     <div class="div1">
+        <h3>Setting styles for specific language using the :lang() pseudo-class</h3>
+        <span lang="en">This is English text.</span>
+        <br>
+        <span lang="fr">Ceci est du texte en français.</span> 
+     </div>
+     <hr>
+
+
+</body>
+</html>
