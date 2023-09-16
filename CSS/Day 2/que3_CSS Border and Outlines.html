@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Border and Outlines</title>
+    <style>
+        div{
+            height: 100px;
+            width: 150px;
+            background-color: #eaecec;
+        }
+
+        .Draw-border{
+            border: 2px solid black;
+        }
+        .individual-border{
+            border-top: 2px dashed red;
+            border-bottom: 2px dotted blue;
+        }
+        .diff-border{
+            border-top: 2px dashed red;
+            border-bottom: 2px dotted blue;
+            border-left: 5px double green;
+            border-right: 5px groove black;
+        }
+        .shorthand-border{
+            border: 5px solid red;
+        }
+        .rounded-border{
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .image-border{
+            border: 10px solid transparent;
+            border-image: url(https://freepngimg.com/save/12549-decorative-border-png-clipart/773x504) 70 round;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        •Draw border around element
+        •Draw border on the individual sides of an element
+        •Setting different styles for the borders
+        •Setting the all border properties at once - The border shorthand property
+        •Creating the rounded corners around an element
+        •Using images for creating borders
+     -->
+     <h1>CSS Border and Outlines</h1>
+     <h3>Draw border around element</h3>
+     <div class="Draw-border"></div>
+
+     <h3>Draw border on the individual sides of an element</h3>
+     <div class="individual-border"></div>
+
+     <h3>Setting different styles for the borders</h3>
+     <div class="diff-border"></div>
+
+     <h3>Setting the all border properties at once - The border shorthand property</h3>
+     <div class="shorthand-border">shorthand property for border-width, border-style, border-color.</div>
+
+     <h3>Creating the rounded corners around an element</h3>
+     <div class="rounded-border"></div>
+
+     <h3>Using images for creating borders</h3>
+     <div class="image-border"></div>
+</body>
+</html>
