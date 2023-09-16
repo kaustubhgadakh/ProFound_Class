@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <style>
+        .fixed-element {
+            position: fixed;
+            top: 50px; 
+            left: 50px; 
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+
+        .parent {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            float: right;
+            background-color: #ccc;
+        }
+
+        .child {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        • Position an element relative to the browser window
+        • Position an element relative to its parent element    
+     -->
+     <div class="fixed-element">
+        Position an element relative to the browser window.
+    </div>
+
+    <div class="parent">
+        <div class="child">
+            Position an element relative to its parent element.
+        </div>
+    </div>
+
+</body>
+</html>
