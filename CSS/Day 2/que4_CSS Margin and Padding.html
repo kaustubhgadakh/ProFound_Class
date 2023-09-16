@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Margin and Padding</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        .alldiv{
+            height: 300px;
+            width: 300px;
+            background-color: black;
+        }
+        .div1{
+            height: 200px;
+            width: 200px;
+            background-color: white;
+            
+            margin-top: 10px;
+            margin-bottom: 15px;
+            margin-left: 30px;
+            margin-right: 20px;
+        }
+        .div2{
+            height: 200px;
+            width: 200px;
+            background-color: white;
+            
+            margin: 10px 20px 15px 30px; /* Top, Right, Bottom, Left margins */
+        }
+
+        .div3{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+
+            padding-top: 30px;
+            padding-bottom: 15px;
+            padding-left: 30px;
+            padding-right: 20px;
+        }
+        .div4{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            
+            padding: 30px 20px 15px 30px; /* Top, Right, Bottom, Left margins */
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        •Sets the margins for individual sides of an element
+        •Setting all margin properties in a single declaration - The margin shorthand property
+        •Sets the paddings for individual sides of an element
+        •Setting all padding properties at once - The padding shorthand property
+     -->
+    <h1>CSS Margin and Padding</h1>
+
+    <h3>Sets the margins for individual sides of an element</h3>
+    <div class="alldiv">
+        <div class="div1"></div>
+    </div>
+
+    <h3>Setting all margin properties in a single declaration</h3>
+    <div class="alldiv">
+        <div class="div2"></div>
+    </div>
+    
+    <h3>Sets the paddings for individual sides of an element</h3>
+    <div class="alldiv">
+        <div class="div3"></div>
+    </div>
+
+    <h3>Setting all padding properties at once</h3>
+    <div class="alldiv">
+        <div class="div4"></div>
+    </div>
+</body>
+</html>
