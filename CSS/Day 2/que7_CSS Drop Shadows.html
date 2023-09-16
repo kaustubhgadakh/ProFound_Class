@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Drop Shadows</title>
+    <style>
+      div {
+        height: auto;
+        padding: 20px;
+        background-color: #cfcfcf;
+      }
+
+      .box-shadow {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        box-shadow: 5px 5px 10px black; /* Horizontal offset, vertical offset, blur radius, and shadow color */
+      }
+
+      .box-multiple-shadows {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        box-shadow: 5px 5px 10px red, -5px -5px 10px blue;
+      }
+
+      .text-shadow {
+        font-size: 30px;
+        text-shadow: 2px 2px 5px black;  /* Horizontal offset, vertical offset, blur radius, and shadow color */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        •Creating box shadow effect
+        •Adding multiple box shadows to an element's box
+        •Creating text shadow effect
+     -->
+    <h1>CSS Drop Shadows</h1>
+    <hr />
+    <div>
+      <h3>Creating box shadow effect</h3>
+      <div class="box-shadow"></div>
+    </div>
+    <hr />
+
+    <div>
+      <h3>Adding multiple box shadows to an element's box</h3>
+      <div class="box-multiple-shadows"></div>
+    </div>
+    <hr />
+
+    <div>
+      <h3>Creating text shadow effect</h3>
+      <p class="text-shadow">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+        nostrum fugit ipsam, rerum mollitia harum praesentium in explicabo
+        soluta tempora nisi voluptatum natus magnam animi, aspernatur
+        blanditiis. Pariatur, voluptates nam?
+      </p>
+    </div>
+    <hr />
+  </body>
+</html>
