@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down List</title>
+    <style>
+        div{
+            height: auto;
+            padding: 10px;
+            background-color: #cfcfcf;
+        }
+
+        .dropdown{
+            position: relative;
+            display:inline-block;
+        }
+
+        .btn{
+            font-size:x-large;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            padding:5px 20px;
+            box-shadow: 3px 3px 10px red;
+            cursor: pointer;
+        }
+        .dropdown-list{
+            list-style: none;
+            position: absolute;
+            background-color: #c5c5c5;
+            min-width: 150px;
+            box-shadow: 10px 10px 20px 0px black;
+            display: none;
+        }
+        .dropdown-list  a{
+            text-decoration: none;
+            padding: 10px 20px;
+            color: rgb(0, 0, 0);
+            display: block;
+        }
+        .dropdown-list a:hover{
+            background-color: #f0f0f0;
+            color: red;
+        }
+
+        .dropdown:hover .dropdown-list {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Create a Simple Drop Down List for Different Links.
+     -->
+     <h1>Create Dropdown List</h1>
+
+     <div>
+        <div class="dropdown">
+            <button class="btn">Button</button>
+            <div class="dropdown-list">
+                    <a href="http://www.google.com" target="_blank">Google</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    <a href="#">Link 4</a>
+                    <a href="#">Link 5</a>
+
+            </div>
+        </div>
+     </div>
+
+
+</body>
+</html>
