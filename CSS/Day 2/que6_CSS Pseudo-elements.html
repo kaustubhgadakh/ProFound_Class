@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo-elements</title>
+    <style>
+      div {
+        height: auto;
+        padding: 20px;
+        background-color: #cfcfcf;
+      }
+      .drop-cap-effect::first-letter {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .first-text::first-line {
+        color: red;
+        font-weight: bold;
+      }
+
+      .note::before {
+        content: "Lorem text:";
+        font-weight: bold;
+        color: blue;
+      }
+
+      .note::after {
+        content: "-kaustubh gadakh";
+        font-weight: bold;
+        color: white;
+        text-decoration: underline;
+      }
+
+      .highlighted-text::first-letter {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        •Creating the drop cap effect using the ::first-letter pseudo-element
+        •Styling the first line of a text differently using the ::first-line pseudo-element
+        •Insert some content before and/or after an element using the ::before and/or ::after pseudoelement
+        •Using pseudo-elements with classes
+     -->
+    <h1>CSS Pseudo-elements</h1>
+    <hr />
+    <div class="">
+      <h3>
+        Creating the drop cap effect using the ::first-letter pseudo-element
+      </h3>
+      <p class="drop-cap-effect">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea nesciunt
+        recusandae repellendus eius laudantium ipsum illum necessitatibus
+        laborum veniam! Sed sapiente quae ipsa earum totam, iure hic nisi
+        tempore repellat.
+      </p>
+    </div>
+    <hr />
+
+    <div>
+      <h3>
+        Styling the first line of a text differently using the ::first-line
+        pseudo-element
+      </h3>
+      <p class="first-text">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium,
+        quia. Necessitatibus, quam reiciendis. Reiciendis alias qui quas fugit
+        harum quisquam, dolor assumenda minima maxime totam odit sed dignissimos
+        dolorum recusandae?
+      </p>
+    </div>
+    <hr />
+
+    <div>
+      <h3>
+        Insert some content before and/or after an element using the ::before
+        and/or ::after pseudoelement
+      </h3>
+      <p class="note">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sequi
+        doloribus fugiat. Commodi corrupti fugiat itaque natus, quaerat eveniet
+        iure reiciendis minima sequi necessitatibus id earum quam. Illo, quaerat
+        suscipit!
+      </p>
+    </div>
+    <hr />
+
+    <div>
+      <h3>Using pseudo-elements with classes</h3>
+      <p class="highlighted-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In commodi
+        minima excepturi, cumque distinctio atque consectetur, repellendus
+        repellat voluptas sed obcaecati? Aliquid accusantium animi fugiat
+        tempora magni, magnam doloribus aut!
+      </p>
+    </div>
+    <hr />
+  </body>
+</html>
