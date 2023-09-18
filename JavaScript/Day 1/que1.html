@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1</title>
+    <Script>
+        function arraySort() {
+            var num = [10, 8, 3, 5, 7];
+            var sortnum = num.sort(function(a, b){
+                return a-b;
+            });
+            // document.write(sortnum);
+            document.getElementById('result1').innerHTML = sortnum;
+
+        }
+
+        function addNum(){
+            var n = 10;
+            var sum = 0;
+            for (let i = 0; i <= n; i++) {
+                sum = sum + i; 
+            }
+            // document.write(sum);
+            document.getElementById('result2').innerHTML = sum;
+        }
+
+        function notDivisible() {
+            for (let i = 1; i <= 20; i++) {
+                if (i%5==0) {
+                    continue;
+                }
+                // document.write(i + " ");
+                document.getElementById('result3').innerHTML = i + " ";
+            }
+        }
+
+        function evenOrOdd() {
+            var n = 10;
+            if (n % 2 == 0) {
+                // document.write(n +" is Even number ");
+                document.getElementById('result4').innerHTML = n +" is Even number ";
+            }else{
+                // document.write(n +" is Odd number ");
+                document.getElementById('result4').innerHTML = n +" is Odd number ";
+            } 
+        }
+    </Script>
+</head>
+<body>
+    <!-- 
+        1. Write a program to sort the numbers in an array.
+        2. Write a program to find addition of first 10 numbers.
+        3. Write a program to print the numbers which are not divisible by 5 using continue in the range 1 to 20.
+        4. Write a program to find the number is odd or even.
+     -->
+    <h1>Day 1</h1>
+     <hr>
+    <div>
+        <h3>1. Write a program to sort the numbers in an array.</h3>
+        <button onclick="arraySort()">array</button>
+        <p id="result1">Result</p>
+    </div>
+    <hr>
+    <div>
+        <h3>2. Write a program to find addition of first 10 numbers.</h3>
+        <button onclick="addNum()">Add of 10 Number</button>
+        <p id="result2">Result</p>
+    </div>
+    <hr>
+    <div>
+        <h3>3. Write a program to print the numbers which are not divisible by 5 using continue in the range 1 to 20.</h3>
+        <button onclick="notDivisible()">Not Divisible by 5</button>
+        <p id="result3">Result</p>
+    </div>
+    <hr>
+    <div>
+        <h3>4. Write a program to find the number is odd or even.</h3>
+        <button onclick="evenOrOdd()">Even or Odd Number</button>
+        <p id="result4">Result</p>
+    </div>
+    <hr>
+</body>
+</html>
