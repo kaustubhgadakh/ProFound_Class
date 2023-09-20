@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+</head>
+<body>
+    <h3>
+        3.Write a JavaScript program to create a new string from a given
+        string with the first character of the given string added at the front
+        and back 
+    </h3>
+    <hr>
+    <div id="ans1"></div>
+    <div id="ans2"></div>
+    <div id="ans3"></div>
+
+    <script>
+        function addFirstCharFrontAndBack(inputString) {
+            if(inputString.length == 0){
+                return inputString;
+            }else{
+                let firstChar = inputString.charAt(0);
+                return firstChar + inputString + firstChar;
+            }  
+        }
+        let input1 = "KAUSTUBH";
+        let input2 = "Sai";
+        let input3 = "";
+        
+        let result1 = addFirstCharFrontAndBack(input1);
+        let result2 = addFirstCharFrontAndBack(input2);
+        let result3 = addFirstCharFrontAndBack(input3);
+
+        document.getElementById("ans1").innerHTML = "1." +result1;
+        document.getElementById("ans2").innerHTML = "2." +result2;
+        document.getElementById("ans3").innerHTML = "3." +result3;
+    </script>
+</body>
+</html>

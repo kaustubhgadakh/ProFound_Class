@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 3</title>
+  </head>
+  <body>
+    <h3>
+      Que 1. Write a JavaScript program to compute the sum of the two given integers.
+      If the two values are same, then returns triple their sum
+    </h3>
+    <hr />
+    <h4>Ans:-</h4>
+
+    <div id="ans">___________</div>
+
+    <script>
+        // let num1 = 4;
+        // let num2 = 2;
+        let num1 = 2;
+        let num2 = 2;
+        let ans = 0;
+
+        if(num1 == num2){
+            ans = 3 * (num1 + num2);
+        }else{
+            ans = (num1 + num2);
+        }
+        document.getElementById("ans").innerHTML = ans;
+    </script>
+  </body>
+</html>

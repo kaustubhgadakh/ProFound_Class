@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 3</title>
+  </head>
+  <body>
+    <h3>
+      4.Write a JavaScript program to reverse the elements of a given array of
+      integers length 3
+    </h3>
+    <hr />
+    <div id="ans"></div>
+
+    <script>
+      let inputArray = [1, 2, 3];
+      let result = reverseArray(inputArray);
+
+      function reverseArray(arr) {
+        if (arr.length !== 3) {
+            return "array of integers length 3";
+        }else{
+            return inputArray.reverse();
+            // return [arr[2], arr[1], arr[0]];
+        }
+      }
+
+      document.getElementById("ans").innerHTML = result;
+
+    </script>
+  </body>
+</html>

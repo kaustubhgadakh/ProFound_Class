@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 3</title>
+  </head>
+  <body>
+    <h3>
+      Que 2. Write a JavaScript program to create a new string adding "Py" in front
+      of a given string. If the given string begins with "Py" then return the
+      original string.
+    </h3>
+    <hr>
+    <h4>Ans:-</h4>
+
+    <div id="ans1">___________</div>
+    <div id="ans2">___________</div>
+
+    <script>
+        let str1 = "Python";
+        let str2 = "Java";
+        
+        function addPy(inputString){
+            if(inputString.startsWith("Py")){
+                return inputString;
+            }else{
+                return "Py" + inputString
+            }
+        }
+
+        let result1 = addPy(str1);
+        let result2 = addPy(str2);
+
+        document.getElementById("ans1").innerHTML = result1;
+        document.getElementById("ans2").innerHTML = result2;
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 3</title>
+  </head>
+  <body>
+    <h3>
+        5.Write a javaScript program to replace uppercase letters to
+        lowercase and vice versa 
+    </h3>
+    <hr />
+    <div id="ans"></div>
+
+    <script>
+      let str = "kaustubh GADAKH";
+      let result = swapCase(str); 
+
+      function swapCase(str){
+        let swappedString = "";
+
+        for (let i = 0; i < str.length; i++) {
+            let char = str.charAt(i);
+
+            if(char === char.toUpperCase()){
+                swappedString = swappedString + char.toLowerCase();
+            }else{
+                swappedString = swappedString + char.toUpperCase();
+            } 
+        }
+        return swappedString;
+      }
+
+      document.getElementById("ans").innerHTML = result;
+
+    </script>
+  </body>
+</html>

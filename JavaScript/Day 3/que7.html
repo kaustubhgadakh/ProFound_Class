@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 3</title>
+  </head>
+  <body>
+    <h3> 
+        Que 7. Print todays Date,Date after 5 dyas in different Format. 
+    </h3>
+    <hr />
+    <h3>Ans :-</h3>
+    <div id="ans"></div>
+
+    <script>
+
+        const currentDate = new Date();
+
+        const dateAfter5Days = new Date(currentDate);
+        dateAfter5Days.setDate(currentDate.getDate() + 5);
+      
+        document.getElementById("ans").innerHTML ="<h4> Print todays Date </h4>"+ currentDate + "<h4> Date after 5 dyas </h4>" + dateAfter5Days;
+
+    </script>
+  </body>
+</html>

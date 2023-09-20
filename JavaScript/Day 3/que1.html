@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            text-align: center;
+            margin: 100px auto;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #message {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        2. WAP to display the message when first button is clicked ,as first
+        button is selected and when second button is clicked, it will
+        display the message that second button is clicked.use css for style.
+        Button1
+        Button2
+     -->
+
+     <div class="container">
+        <button onclick="btn1()">First Button</button>
+        <button onclick="btn2()">Second Button</button>
+        <div id="message">Click a button</div>
+    </div>
+
+    <script>
+        function btn1() {
+            document.getElementById("message").innerHTML= "First button is clicked.";
+        }
+        function btn2() {
+            document.getElementById("message").innerHTML= "Second button is clicked.";
+        }
+        
+    </script>
+</body>
+</html>
